@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -5,7 +7,13 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+        // display: ["Imperial Script"],
+        mono: ["Dank Mono", ...defaultTheme.fontFamily.mono],
+      },
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };
