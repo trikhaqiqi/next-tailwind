@@ -46,4 +46,4 @@ export default function Login() {
     );
 }
 
-Login.getLayout = (page) => <Guest cardClassName="w-2/5" header="Login" title="Login" children={page} />;
+Login.getLayout = (page) => <Guest header="Login" title="Login" children={page} />;
