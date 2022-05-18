@@ -1,5 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import Button from "../components/Button";
+import Checkbox from "../components/Checkbox";
 import Input from "../components/Input";
 import Label from "../components/Label";
 import Guest from "../layouts/Guest";
@@ -17,20 +19,31 @@ export default function Login() {
                     <Input type="password" name="password" id="password" placeholder="Input your password" />
                 </div>
                 <div className="mb-5 flex justify-between">
-                    <div>
-                        <input
-                            className="accent-sky-400 mr-3"
-                            type="checkbox"
-                            name="remember"
-                            id="remember" />
-                        <label htmlFor="remember">Remember me</label>
-                    </div>
+                    <Checkbox
+                        forInput="remember"
+                        label="Remember Me"
+                        name="remember"
+                        id="remember"
+                    />
                     <a href="#">Forgot password</a>
                 </div>
-                <Button>Login</Button>
+                <div className="flex items-center justify-between">
+                    <Button>Login</Button>
+                    <span>
+                        Do not have an account yet ? {" "}
+                        <Link
+                            href="/register"
+                        >
+                            <a
+                                className="text-emerald-500 font-medium">
+                                Register
+                            </a>
+                        </Link>
+                    </span>
+                </div>
             </form>
         </div>
     );
 }
 
-Login.getLayout = (page) => <Guest header="Login" title="Login" children={page} />;
+Login.getLayout = (page) => <Guest cardClassName="w-2/5" header="Login" title="Login" children={page} />;

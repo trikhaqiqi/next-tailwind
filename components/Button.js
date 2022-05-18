@@ -6,7 +6,7 @@ export default function Button({ children, className, ...props }) {
         ${className
                 ?
                 className :
-                'bg-blue-600 focus:ring-cyan-200 hover:bg-blue-700'
+                'bg-emerald-500 focus:ring-emerald-200 hover:bg-emerald-600'
             } 
             border border-transparent px-6 py-2.5 text-sm font-medium transition duration-300 focus:outline-none focus:ring rounded-xl text-white `
         }>
