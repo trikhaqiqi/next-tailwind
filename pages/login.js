@@ -25,7 +25,7 @@ export default function Login() {
                         name="remember"
                         id="remember"
                     />
-                    <a href="#">Forgot password</a>
+                    <a className="text-emerald-500 font-medium" href="#">Forgot password</a>
                 </div>
                 <div className="flex items-center justify-between">
                     <Button>Login</Button>
