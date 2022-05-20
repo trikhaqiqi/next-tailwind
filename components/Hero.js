@@ -1,4 +1,5 @@
 import React from "react";
+import MobileNav from "./MobileNav";
 import NavLink from "./Navlink";
 
 export default function Hero() {
@@ -10,11 +11,13 @@ export default function Hero() {
     };
     return (
         <div className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
+            <MobileNav />
+
             <div className="hidden md:block border-b border-white/10 py-3">
                 <div className="container">
                     <nav className="flex items-center justify-between">
                         <div className="flex items-center gap-x-2">
-                            <a href="#" className="text-white font-medium uppercase mr-6">Brand</a>
+                            <a href="#" className="text-white font-semibold uppercase mr-6">Kudang Koding</a>
                             <NavLink href="#">Home</NavLink>
                             <NavLink href="#">Articles</NavLink>
                             <NavLink href="#">Gallery</NavLink>
@@ -23,7 +26,12 @@ export default function Hero() {
                         </div>
                         {auth.check ? (
                             <div className="flex items-center gap-x-2">
-                                <NavLink href="#">{auth.user.name}</NavLink>
+                                <NavLink className="flex items-center hover:bg-transparent gap-x-2" href="#">
+                                    {auth.user.name}
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </NavLink>
                             </div>
                         ) : (
                             <div className="flex items-center gap-x-2">
@@ -34,6 +42,7 @@ export default function Hero() {
                     </nav>
                 </div>
             </div>
+
             <div className="container">
                 <div className="w-full md:w-2/3">
                     <header className="text-white py-4 sm:py-8 md:py-16">
