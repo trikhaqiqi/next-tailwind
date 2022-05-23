@@ -6,7 +6,7 @@ import NavLink from "./Navlink";
 
 export default function Navbar() {
     const auth = {
-        check: false,
+        check: true,
         user: {
             name: 'M. Ilyas Tri Khaqiqi',
         },

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import Hero from "../components/Hero";
+import ApplicationLogo from "../components/ApplicationLogo";
+import Footer from "../components/Footer";
 
 export default function App({ title = 'Next Tailwind CSS', children }) {
     return (
@@ -13,6 +14,8 @@ export default function App({ title = 'Next Tailwind CSS', children }) {
             <div>
                 {children}
             </div>
+
+            <Footer />
         </div>
     );
 }
