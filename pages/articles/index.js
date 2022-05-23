@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../components/Hero";
-import App from '../layouts/App';
+import Hero from "../../components/Hero";
+import App from '../../layouts/App';
 
-export default function Articles() {
+export default function Index() {
     const posts = [
         {
             title: 'Lorem ipsum dolor sit amet.',
@@ -45,20 +45,18 @@ export default function Articles() {
         <>
             <Hero>
                 <Hero.Body>
-                    <header className="text-white py-4 sm:py-8 md:py-16">
-                        <Hero.Title>Our Articles</Hero.Title>
-                        <p className="text-base md:text-xl leading-relaxed font-light mt-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit, recusandae quis dolorum veritatis nulla, nemo consequuntur temporibus quisquam expedita libero est facere ipsum laboriosam eveniet itaque. Rem, dicta temporibus?</p>
-                    </header>
+                    <Hero.Title>Our Articles</Hero.Title>
+                    <p className="text-base md:text-xl leading-relaxed font-light mt-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit, recusandae quis dolorum veritatis nulla, nemo consequuntur temporibus quisquam expedita libero est facere ipsum laboriosam eveniet itaque. Rem, dicta temporibus?</p>
                 </Hero.Body>
             </Hero>
             <div className="container">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-x-16 sm:gap-y-16">
                     {posts.map((post, index) => (
                         <div key={index}>
-                            <a href="#">
+                            <a href="/articles/single">
                                 <img className="rounded-xl hover:shadow-lg transition-shadow duration-300 mb-4 aspect-video w-full object-cover object-center" src={post.picture} alt={post.title} />
                             </a>
-                            <a href="#">
+                            <a href="/articles/single">
                                 <h1 className="mb-2 sm:mb-4 font-semibold text-black">{post.title}</h1>
                             </a>
                             <div className="flex items-center font-mono justify-between text-sm text-gray-500">
@@ -73,4 +71,4 @@ export default function Articles() {
     );
 }
 
-Articles.getLayout = page => <App title="Our Articles" children={page} />;
+Index.getLayout = page => <App title="Our Articles" children={page} />;

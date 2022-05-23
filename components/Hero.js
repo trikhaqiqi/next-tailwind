@@ -1,12 +1,13 @@
 import React from "react";
 import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
+
 const Title = ({ children }) => (
     <h1 className="text-xl md:text-3xl font-bold">{children}</h1>
 );
 
 const Body = ({ children }) => (
-    <div>{children}</div>
+    <div className="text-white py-4 sm:py-8 md:py-16">{children}</div>
 );
 
 const Hero = ({ children }) => {
