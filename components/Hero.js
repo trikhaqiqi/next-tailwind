@@ -2,8 +2,8 @@ import React from "react";
 import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
 
-const Title = ({ children }) => (
-    <h1 className="text-xl md:text-3xl font-bold">{children}</h1>
+const Title = ({ className, children }) => (
+    <h1 className={`${className ? className : ''} text-xl md:text-3xl font-bold text-white inline-block`}>{children}</h1>
 );
 
 const Body = ({ children }) => (
